@@ -10,7 +10,7 @@
       <!--选项表容器-->
       <div class="jt-options">
         <!--选项-->
-        <button class="jt-option" v-for="(option, index) in options1" :key="index" @click="onClickOption(index)">
+        <button class="jt-option" v-for="(option, index) in options1" :key="index" @click="onClickOption(option)">
           <!--图片-->
           <img class="jt-icon" :src="option.icon"/>
           <!--选项标题-->
@@ -20,28 +20,13 @@
       <!--选项表容器-->
       <div class="jt-options">
         <!--选项-->
-        <button class="jt-option" v-for="(option, index) in options2" :key="index" @click="onClickOption(index)">
+        <button class="jt-option" v-for="(option, index) in options2" :key="index" @click="onClickOption(option)">
           <!--图片-->
           <img class="jt-icon" :src="option.icon"/>
           <!--选项标题-->
           <p class="jt-title">{{option.title}}</p>
         </button>
       </div>
-      <!--选项表容器-->
-      <!--<mu-grid-list class="jt-options" :cellHeight=100 :cols=2 :padding=4>-->
-      <!--&lt;!&ndash;选项&ndash;&gt;-->
-      <!--<mu-grid-tile class="jt-option" v-for="(option, index) in options" :key="index">-->
-      <!--<button @click="onClickOption(index)">-->
-      <!--&lt;!&ndash;图片容器&ndash;&gt;-->
-      <!--<mu-paper class="jt-paper" circle :zDepth="2">-->
-      <!--&lt;!&ndash;图片&ndash;&gt;-->
-      <!--<img class="jt-icon" :src="option.icon"/>-->
-      <!--</mu-paper>-->
-      <!--&lt;!&ndash;选项标题&ndash;&gt;-->
-      <!--&lt;!&ndash;<p slot="jt-title">{{option.title}}</p>&ndash;&gt;-->
-      <!--</button>-->
-      <!--</mu-grid-tile>-->
-      <!--</mu-grid-list>-->
     </div>
     <!--尾部选项卡-->
     <jt-bottom/>
@@ -64,18 +49,22 @@ export default {
       // 主页选项
       options1: [
         {
+          name: 'personalInfo',
           icon: '../../static/opt1.png',
           title: '个人信息'
         }, {
+          name: 'myGroup',
           icon: '../../static/opt2.png',
           title: '我的团队'
         }
       ],
       options2: [
         {
+          name: 'record',
           icon: '../../static/opt3.png',
           title: '消费记录'
         }, {
+          name: 'wallet',
           icon: '../../static/opt4.png',
           title: '我的钱包'
         }
@@ -83,9 +72,10 @@ export default {
     }
   },
   methods: {
-    onClickOption (index) {
-      //  根据index判断点击了哪个选项
-      console.log(index)
+    onClickOption ({name}) {
+      console.log(`/home/${name}`)
+      // 路由跳转
+      this.$router.push({path: `/home/${name}`})
     }
   }
 }
@@ -108,6 +98,7 @@ export default {
     background-size: cover;
   }
 
+  /*首页容器*/
   .home-body {
     height: 100%;
     @include jt-flex(column, nowrap, space-around, center)
@@ -115,6 +106,7 @@ export default {
 
   /*二维码*/
   .jt-qrcode {
+    margin: 10vh;
     width: 80vw;
     height: 20vh;
   }
@@ -131,8 +123,10 @@ export default {
   .jt-option {
     @include jt-flex(column, nowrap, space-between, center);
     background-color: transparent;
+    width: 100%;
     border: 0;
-    margin: 20px 0.5%;
+    margin: 0 0.5%;
+    padding: 0;
   }
 
   /*图标*/
