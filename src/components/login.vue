@@ -22,7 +22,6 @@ export default {
   computed: {},
   methods: {
     onClickBtn () {
-      console.log('登陆！！！')
       this.$router.push({path: 'home'})
     }
   }

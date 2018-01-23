@@ -24,7 +24,8 @@ export default {
 
 <style scoped lang="scss">
 .jt-header {
-  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  background-color: rgba(40, 35, 35, 1);
   color: rgba(255, 255, 255, 0.7);
   height: 50px;
 }

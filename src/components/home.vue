@@ -8,7 +8,7 @@
       <!--会员卡二维码-->
       <mu-paper class="jt-qrcode" :zDepth="2"></mu-paper>
       <!--选项表容器-->
-      <div class="jt-options">
+      <div class="jt-options1">
         <!--选项-->
         <button class="jt-option" v-for="(option, index) in options1" :key="index" @click="onClickOption(option)">
           <!--图片-->
@@ -18,7 +18,7 @@
         </button>
       </div>
       <!--选项表容器-->
-      <div class="jt-options">
+      <div class="jt-options2">
         <!--选项-->
         <button class="jt-option" v-for="(option, index) in options2" :key="index" @click="onClickOption(option)">
           <!--图片-->
@@ -49,7 +49,7 @@ export default {
       // 主页选项
       options1: [
         {
-          name: 'personalInfo',
+          name: 'home',
           icon: '../../static/opt1.png',
           title: '个人信息'
         }, {
@@ -106,17 +106,25 @@ export default {
 
   /*二维码*/
   .jt-qrcode {
-    margin: 10vh;
     width: 80vw;
     height: 20vh;
   }
 
-  /*选项容器*/
-  .jt-options {
+  /*选项容器上*/
+  .jt-options1 {
     width: 80vw;
     height: 20vh;
     @include jt-flex(row, nowrap, space-around, center);
     background-color: transparent;
+  }
+
+  /*选项容器下*/
+  .jt-options2 {
+    width: 80vw;
+    height: 20vh;
+    @include jt-flex(row, nowrap, space-around, center);
+    background-color: transparent;
+    margin-bottom: 10vh;
   }
 
   /*选项*/
@@ -132,13 +140,14 @@ export default {
   /*图标*/
   .jt-icon {
     width: 20vw;
-    max-width: 114px;
-    min-width: 62px;
+    max-width: 100px;
+    min-width: 70px;
     /*height: 100px;*/
   }
 
   /*选项标题*/
   .jt-title {
     background-color: transparent;
+    margin: 5px 0;
   }
 </style>
