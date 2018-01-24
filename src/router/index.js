@@ -8,6 +8,7 @@ import myInvitationCode from '../components/home/myInvitationCode' // 我的邀�
 // 我的团队及其子页面
 import myGroup from '../components/home/myGroup' // 我的团队
 import enchashmentRecord from '../components/home/enchashmentRecord' // 提现记录
+import enchashment from '../components/home/enchashment' // 提现
 // 消费记录及其子页面
 import purchaseRecord from '../components/home/purchaseRecord' // 消费记录
 // 我的钱包及其子页面
@@ -25,6 +26,7 @@ export default new Router({
     // 我的团队及其子页面
     { path: '/home/myGroup', component: myGroup }, // 我的团队
     { path: '/home/myGroup/enchashmentRecord', component: enchashmentRecord }, // 提现记录
+    { path: '/home/myGroup/enchashment', component: enchashment }, // 提现
     // 消费记录及其子页面
     { path: '/home/purchaseRecord', component: purchaseRecord }, // 消费记录
     // 我的钱包及其子页面

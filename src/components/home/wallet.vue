@@ -1,4 +1,5 @@
 <template>
+  <!--我的钱包-->
   <div class="wallet-container">
     <!--导航-->
     <jt-header :title="title"></jt-header>

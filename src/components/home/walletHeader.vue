@@ -1,7 +1,8 @@
 <template>
+  <!--我的钱包导航-->
   <mt-header class="my-group-header" :title="title">
-    <mt-button icon="back" slot="left" @click="onClickBack">返回</mt-button>
-    <mt-button class="record-btn" slot="right" @click="onClickBack">账户明细</mt-button>
+    <mt-button icon="back" slot="left" @click="onClickBack"></mt-button>
+    <mt-button class="account-details" slot="right" @click="onClickAccountDetails">账户明细</mt-button>
   </mt-header>
 </template>
 
@@ -13,6 +14,9 @@ export default {
     // 点击返回
     onClickBack () {
       this.$router.go(-1)
+    },
+    onClickAccountDetails () {
+      console.log('点击账户明细！')
     }
   }
 }
@@ -26,7 +30,7 @@ export default {
     height: 50px;
   }
 
-  .record-btn {
+  .account-details {
     color: rgb(176, 151, 121);
     font-size: 0.75em;
   }

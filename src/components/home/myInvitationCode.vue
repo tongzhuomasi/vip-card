@@ -1,13 +1,21 @@
 <template>
+  <!--我的邀请码-->
   <div class="my-invitation-code-container">
+    <!--主导航-->
     <jt-header :title="title"></jt-header>
+    <!--子导航-->
     <jt-subheader :title="title"></jt-subheader>
+    <!--邀请码主体-->
     <div class="invitation-code-body">
+      <!--邀请码容器-->
       <div class="img-container">
+        <!--背景图-->
         <img class="invitation-bg-img" src="../../../static/invitation-code-bg.png" alt="推荐码背景">
+        <!--邀请码-->
         <h1 class="invitation-number">{{invitationNumber}}</h1>
       </div>
       <h2>您的推荐码</h2>
+      <!--详细说明-->
       <div class="text-container">
         <p>邀请新人注册钻石会员卡</p>
         <p>您可得到积分奖励</p>

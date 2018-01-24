@@ -1,4 +1,5 @@
 <template>
+  <!--我的团队-->
   <div class="myGroup-container">
     <!--导航-->
     <jt-header :title="title"></jt-header>
@@ -17,7 +18,7 @@
             <p>{{money}}</p>
           </div>
         </div>
-        <button class="special-bottom">提现</button>
+        <button class="special-bottom" @click="onClickEnchashment">提现</button>
       </mu-list-item>
       <!--列表项-->
       <mu-list-item class="mu-list-item">
@@ -49,8 +50,8 @@ export default {
     }
   },
   methods: {
-    onClickBtn () {
-      this.$router.go(-1)
+    onClickEnchashment () {
+      this.$router.push({path: '/home/myGroup/enchashment'}) // 到提现界面
     }
   }
 }

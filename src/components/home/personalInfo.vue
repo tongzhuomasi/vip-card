@@ -1,4 +1,5 @@
 <template>
+  <!--个人信息-->
   <div class="personalInfo-container">
     <!--导航-->
     <jt-header :title="title"></jt-header>
@@ -26,7 +27,7 @@
         <mu-icon value="chat_bubble" slot="right"/>
       </mu-list-item>
     </mu-list>
-    <!--推出登陆按钮-->
+    <!--退出登陆按钮-->
     <mt-button class="jt-logoff-btn" type="primary" v-on="{click: onClickLogoffBtn}">退出登陆</mt-button>
   </div>
 </template>

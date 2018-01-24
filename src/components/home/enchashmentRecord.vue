@@ -59,6 +59,11 @@ export default {
     justify-content: $main;
     align-items: $cross;
   }
+  /*列表头部*/
+  .mu-list-header {
+    width: 100%;
+    padding: 0;
+  }
   /*列表项*/
   .record-item {
     padding: 5px;

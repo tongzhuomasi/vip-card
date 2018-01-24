@@ -100,7 +100,11 @@ export default {
 
   /*首页容器*/
   .home-body {
-    height: 100%;
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
     @include jt-flex(column, nowrap, space-around, center)
   }
 
