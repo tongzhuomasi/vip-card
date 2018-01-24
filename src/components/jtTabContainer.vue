@@ -23,7 +23,6 @@ import jtHeader from './jtHeader'
 import jtBottom from './jtBottom'
 import home from './home/home'
 import financing from './financing/financing'
-import {mapState} from '../vuex/store'
 
 export default {
   name: 'jt-tab-container',
@@ -35,6 +34,7 @@ export default {
   },
   data () {
     return {
+      active: 'home'
     }
   },
   computed: {
