@@ -2,8 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import login from '../components/login' // 登陆
 import jtTabContainer from '../components/jtTabContainer' // tab容器
-// 首页
-import home from '../components/home/home' // 首页
 // 个人信息及其子页面
 import personalInfo from '../components/home/personalInfo/personalInfo' // 个人信息
 import myInvitationCode from '../components/home/personalInfo/myInvitationCode' // 我的邀请码
@@ -29,8 +27,6 @@ export default new Router({
     { path: '/', name: 'login', component: login }, // 登陆页面
     // tab容器
     { path: '/tab', name: 'tab', component: jtTabContainer }, // tab容器
-    // 首页
-    { path: '/home', name: 'home', component: home }, // 首页
     // 个人信息及其子页面
     { path: '/home/personalInfo', component: personalInfo }, // 个人信息
     { path: '/home/personalInfo/myInvitationCode', component: myInvitationCode }, // 我的邀请码

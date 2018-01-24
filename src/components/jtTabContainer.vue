@@ -40,6 +40,11 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+  @mixin jt-flex($dir, $wrap, $main, $cross) {
+    display: flex;
+    flex-flow: $dir $wrap;
+    justify-content: $main;
+    align-items: $cross;
+  }
 </style>

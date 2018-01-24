@@ -1,8 +1,6 @@
 <template>
   <!--外部容器-->
   <div class="home-container">
-    <!--头部导航-->
-    <jt-header class="jt-header" title="home"/>
     <!--中间主体-->
     <div class="home-body">
       <!--会员卡二维码-->
@@ -30,21 +28,13 @@
       <!--背景图片-->
       <img class="bg-img" src="../../../static/bg-home.png" alt="背景图">
     </div>
-    <!--尾部选项卡-->
-    <jt-bottom/>
   </div>
 </template>
 
 <script>
-import jtHeader from '../jtHeader'
-import jtBottom from '../jtBottom'
 
 export default {
   name: 'home',
-  components: {
-    jtHeader,
-    jtBottom
-  },
   data () {
     return {
       // 主页选项
@@ -93,14 +83,14 @@ export default {
   /*首页容器*/
   .home-container {
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     @include jt-flex(column, nowrap, space-between, stretch);
   }
 
   /*首页主体*/
   .home-body {
     position: absolute;
-    top: 50px;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
