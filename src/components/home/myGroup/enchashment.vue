@@ -51,7 +51,7 @@
 <script>
 import jtHeader from '../../jtHeader'
 import jtSubHeader from '../../jtSubHeader'
-import enchashmentApplyDialog from '../enchashmentApplyDialog'
+import enchashmentApplyDialog from './enchashmentApplyDialog'
 export default {
   name: 'enchashment',
   components: {

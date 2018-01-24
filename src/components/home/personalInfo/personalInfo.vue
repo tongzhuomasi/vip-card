@@ -15,16 +15,25 @@
         <mu-avatar src="../../../static/jiatenghui.jpg" slot="leftAvatar"/>
       </mu-list-item>
       <!--列表项-->
-      <mu-list-item class="mu-list-item" title="手机号码">
-        <mu-icon value="13022222222" slot="right"/>
+      <mu-list-item class="mu-list-item">
+        <div class="list-item">
+          <p class="list-item-left" slot="left">手机号码</p>
+          <p class="list-item-right" slot="right">13016661666</p>
+        </div>
       </mu-list-item>
       <!--列表项-->
-      <mu-list-item class="mu-list-item" title="我的推荐码" @click="onClickInvitationCode">
-        <img src="../../../../static/arrow.png" alt="图标" slot="right">
+      <mu-list-item class="mu-list-item" @click="onClickInvitationCode">
+        <div class="list-item">
+          <p class="list-item-left" slot="left">我的推荐码</p>
+          <img src="../../../../static/arrow.png" alt="图标" slot="right">
+        </div>
       </mu-list-item>
       <!--列表项-->
-      <mu-list-item class="mu-list-item" title="修改密码">
-        <img src="../../../../static/arrow.png" alt="图标" slot="right">
+      <mu-list-item class="mu-list-item">
+        <div class="list-item">
+          <p class="list-item-left" slot="left">修改密码</p>
+          <img src="../../../../static/arrow.png" alt="图标" slot="right">
+        </div>
       </mu-list-item>
     </mu-list>
     <!--退出登陆按钮-->
@@ -78,12 +87,21 @@ export default {
     padding: 0;
   }
   /*列表项*/
-  .mu-list-item {
-    font-size: 16px;
-    i {
-      font-size: 16px;
-      margin-right: 10vh;
+  .list-item {
+    @include jt-flex(row, nowrap, space-between, center);
+    p {
+      font-size: 0.75rem;
+      margin: 0;
     }
+  }
+  /*列表项左侧*/
+  .list-item-left {
+    width: 40vw;
+  }
+  /*列表项右侧*/
+  .list-item-right {
+    width: 40vw;
+    text-align: right;
   }
   /*退出登陆按钮*/
   .jt-logoff-btn {
