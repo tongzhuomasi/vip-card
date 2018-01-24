@@ -26,7 +26,7 @@
 import jtHeader from '../jtHeader'
 import jtSubHeader from '../jtSubHeader'
 export default {
-  name: 'record',
+  name: 'purchaseRecord',
   components: {
     jtHeader,
     jtSubHeader

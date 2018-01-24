@@ -1,7 +1,7 @@
 <template>
   <mt-header class="my-group-header" :title="title">
     <mt-button icon="back" slot="left" @click="onClickBack">返回</mt-button>
-    <mt-button class="record-btn" slot="right" @click="onClickBack">提现记录</mt-button>
+    <mt-button class="record-btn" slot="right" @click="onClickEnchashmentRecord">提现记录</mt-button>
   </mt-header>
 </template>
 
@@ -13,6 +13,10 @@ export default {
     // 点击返回
     onClickBack () {
       this.$router.go(-1)
+    },
+    // 点击提现记录
+    onClickEnchashmentRecord () {
+      this.$router.push({path: '/home/myGroup/enchashmentRecord'})
     }
   }
 }

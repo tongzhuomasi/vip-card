@@ -1,10 +1,12 @@
 <template>
   <mt-tabbar v-model="selected">
-    <mt-tab-item id="会员">
-      <img slot="icon" src="../../static/vip-selected.png">
+    <!--会员-->
+    <mt-tab-item id="vip">
+      <img class="jt-bottom-icon" slot="icon" src="../../static/vip-selected.png">
     </mt-tab-item>
-    <mt-tab-item id="理财">
-      <img slot="icon" src="../../static/financing.png">
+    <!--理财-->
+    <mt-tab-item id="financing">
+      <img class="jt-bottom-icon" slot="icon" src="../../static/financing.png">
     </mt-tab-item>
   </mt-tabbar>
 </template>
@@ -14,7 +16,7 @@ export default {
   name: 'bottom-navigation',
   data () {
     return {
-      selected: '会员'
+      selected: 'vip'
     }
   },
   methods: {
@@ -39,6 +41,9 @@ export default {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
+  }
+  .jt-bottom-icon {
+    width: 25vw;
   }
 
 </style>

@@ -1,6 +1,6 @@
 <template>
   <mt-header class="personal-info-header" :title="title">
-    <mt-button icon="back" slot="left" @click="onClickBack">返回</mt-button>
+    <mt-button icon="back" slot="left" @click="onClickBack"></mt-button>
   </mt-header>
 </template>
 

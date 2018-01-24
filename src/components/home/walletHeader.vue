@@ -1,7 +1,7 @@
 <template>
   <mt-header class="my-group-header" :title="title">
     <mt-button icon="back" slot="left" @click="onClickBack">返回</mt-button>
-    <mt-button class="record-btn" slot="right" @click="onClickBack">提现记录</mt-button>
+    <mt-button class="record-btn" slot="right" @click="onClickBack">账户明细</mt-button>
   </mt-header>
 </template>
 

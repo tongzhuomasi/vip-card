@@ -60,7 +60,7 @@ export default {
       ],
       options2: [
         {
-          name: 'record',
+          name: 'purchaseRecord',
           icon: '../../static/opt3.png',
           title: '消费记录'
         }, {
