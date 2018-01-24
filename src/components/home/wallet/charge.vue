@@ -1,7 +1,9 @@
 <template>
   <div class="charge-container">
     <jt-header :title="title"></jt-header>
-    <div>充值页面</div>
+    <div class="jt-charge-container">
+      <jt-sub-header></jt-sub-header>
+    </div>
   </div>
 </template>
 
@@ -23,6 +25,6 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 </style>

@@ -23,6 +23,8 @@ export default {
       selected: 'vip'
     }
   },
+  computed: {
+  },
   methods: {
     handleChange (val) {
       this.bottomNav = val
