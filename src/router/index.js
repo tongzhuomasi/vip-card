@@ -13,6 +13,7 @@ import enchashment from '../components/home/enchashment' // 提现
 import purchaseRecord from '../components/home/purchaseRecord' // 消费记录
 // 我的钱包及其子页面
 import wallet from '../components/home/wallet' // 我的钱包
+import accountDetail from '../components/home/accountDetail' // 账户明细
 
 Vue.use(Router)
 
@@ -30,6 +31,7 @@ export default new Router({
     // 消费记录及其子页面
     { path: '/home/purchaseRecord', component: purchaseRecord }, // 消费记录
     // 我的钱包及其子页面
-    { path: '/home/wallet', component: wallet } // 我的钱包
+    { path: '/home/wallet', component: wallet }, // 我的钱包
+    { path: '/home/wallet/accountDetail', component: accountDetail } // 我的钱包
   ]
 })

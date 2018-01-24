@@ -16,7 +16,7 @@ export default {
       this.$router.go(-1)
     },
     onClickAccountDetails () {
-      console.log('点击账户明细！')
+      this.$router.push({path: '/home/wallet/accountDetail'})
     }
   }
 }

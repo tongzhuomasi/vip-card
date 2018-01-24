@@ -18,12 +18,12 @@
         </div>
       </mu-list-item>
       <!--列表项-->
-      <mu-list-item class="mu-list-item" title="充值">
+      <mu-list-item class="mu-list-item" title="充值" @click="onCharge">
         <img src="../../../static/charge.png" alt="充值" slot="left">
         <img src="../../../static/arrow.png" alt="图标" slot="right">
       </mu-list-item>
       <!--列表项-->
-      <mu-list-item class="mu-list-item" title="提现">
+      <mu-list-item class="mu-list-item" title="提现" @click="onWithdraw">
         <img src="../../../static/pop.png" alt="提现" slot="left">
         <img src="../../../static/arrow.png" alt="图标" slot="right">
       </mu-list-item>
@@ -45,6 +45,14 @@ export default {
     return {
       title: '我的钱包',
       money: '3100.00'
+    }
+  },
+  methods: {
+    onCharge () {
+      console.log('充值了')
+    },
+    onWithdraw () {
+      console.log('提现了')
     }
   }
 }
