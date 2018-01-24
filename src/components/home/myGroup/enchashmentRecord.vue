@@ -27,8 +27,8 @@
 </template>
 
 <script>
-import jtHeader from '../jtHeader'
-import jtSubHeader from '../jtSubHeader'
+import jtHeader from '../../jtHeader'
+import jtSubHeader from '../../jtSubHeader'
 export default {
   name: 'enchashment-record',
   components: {

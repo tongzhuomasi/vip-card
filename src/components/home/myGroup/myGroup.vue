@@ -14,7 +14,7 @@
       <mu-list-item class="mu-list-item-special">
         <div class="mu-list-item-special-container">
           <div class="special-top">
-            <img class="special-img" src="../../../static/money.png" alt="金币">
+            <img class="special-img" src="../../../../static/money.png" alt="金币">
             <p>{{money}}</p>
           </div>
         </div>
@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import jtHeader from '../jtHeader'
+import jtHeader from '../../jtHeader'
 import myGroupHeader from './myGroupHeader'
 
 export default {

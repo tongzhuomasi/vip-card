@@ -34,7 +34,6 @@
 </template>
 
 <script>
-/* eslint-disable no-unused-vars */
 import jtHeader from './jtHeader'
 import jtBottom from './jtBottom'
 
@@ -49,22 +48,22 @@ export default {
       // 主页选项
       options1: [
         {
-          name: 'personalInfo',
+          path: 'personalInfo/personalInfo',
           icon: '../../static/opt1.png',
           title: '个人信息'
         }, {
-          name: 'myGroup',
+          path: 'myGroup/myGroup',
           icon: '../../static/opt2.png',
           title: '我的团队'
         }
       ],
       options2: [
         {
-          name: 'purchaseRecord',
+          path: 'purchaseRecord/purchaseRecord',
           icon: '../../static/opt3.png',
           title: '消费记录'
         }, {
-          name: 'wallet',
+          path: 'wallet/wallet',
           icon: '../../static/opt4.png',
           title: '我的钱包'
         }
@@ -72,10 +71,10 @@ export default {
     }
   },
   methods: {
-    onClickOption ({name}) {
-      console.log(`/home/${name}`)
+    onClickOption ({path}) {
+      console.log(`/home/${path}`)
       // 路由跳转
-      this.$router.push({path: `/home/${name}`})
+      this.$router.push({path: `/home/${path}`})
     }
   }
 }

@@ -24,8 +24,8 @@
 </template>
 
 <script>
-import jtHeader from '../jtHeader'
-import jtSubHeader from '../jtSubHeader'
+import jtHeader from '../../jtHeader'
+import jtSubHeader from '../../jtSubHeader'
 
 export default {
   name: 'purchaseRecord',
@@ -74,9 +74,17 @@ export default {
     width: 40vw;
     @include jt-flex(column, nowrap, center, center);
     p {
+      font-size: 0.75rem;
       margin: 0;
       width: 40vw;
     }
+  }
+  /*列表项右侧*/
+  .record-item-right {
+    width: 40vw;
+    font-size: 1rem;
+    margin: 0;
+    text-align: right;
   }
 
 </style>

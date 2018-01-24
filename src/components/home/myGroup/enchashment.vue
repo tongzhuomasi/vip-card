@@ -9,7 +9,7 @@
         <!--子导航-->
         <jt-sub-header :title="title"></jt-sub-header>
         <!--宣传图-->
-        <img class="jt-banner" src="../../../static/banner.png" alt="宣传图">
+        <img class="jt-banner" src="../../../../static/banner.png" alt="宣传图">
         <!--汇率说明-->
         <div class="exchange-rate-description">
           <p class="description-top">今日提现汇率{{point}}积分兑换{{money}}块钱</p>
@@ -49,9 +49,9 @@
 </template>
 
 <script>
-import jtHeader from '../jtHeader'
-import jtSubHeader from '../jtSubHeader'
-import enchashmentApplyDialog from './enchashmentApplyDialog'
+import jtHeader from '../../jtHeader'
+import jtSubHeader from '../../jtSubHeader'
+import enchashmentApplyDialog from '../enchashmentApplyDialog'
 export default {
   name: 'enchashment',
   components: {

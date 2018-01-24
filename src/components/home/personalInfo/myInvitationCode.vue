@@ -10,7 +10,7 @@
       <!--邀请码容器-->
       <div class="img-container">
         <!--背景图-->
-        <img class="invitation-bg-img" src="../../../static/invitation-code-bg.png" alt="推荐码背景">
+        <img class="invitation-bg-img" src="../../../../static/invitation-code-bg.png" alt="推荐码背景">
         <!--邀请码-->
         <h1 class="invitation-number">{{invitationNumber}}</h1>
       </div>
@@ -27,8 +27,8 @@
 </template>
 
 <script>
-import jtHeader from '../jtHeader'
-import jtSubheader from '../jtSubHeader'
+import jtHeader from '../../jtHeader'
+import jtSubheader from '../../jtSubHeader'
 export default {
   name: 'my-invitation-code',
   components: {

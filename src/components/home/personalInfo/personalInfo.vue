@@ -20,11 +20,11 @@
       </mu-list-item>
       <!--列表项-->
       <mu-list-item class="mu-list-item" title="我的推荐码" @click="onClickInvitationCode">
-        <mu-icon value="chat_bubble" slot="right"/>
+        <img src="../../../../static/arrow.png" alt="图标" slot="right">
       </mu-list-item>
       <!--列表项-->
       <mu-list-item class="mu-list-item" title="修改密码">
-        <mu-icon value="chat_bubble" slot="right"/>
+        <img src="../../../../static/arrow.png" alt="图标" slot="right">
       </mu-list-item>
     </mu-list>
     <!--退出登陆按钮-->
@@ -33,8 +33,8 @@
 </template>
 
 <script>
-import jtHeader from '../jtHeader'
-import jtSubHeader from '../jtSubHeader'
+import jtHeader from '../../jtHeader'
+import jtSubHeader from '../../jtSubHeader'
 export default {
   name: 'personal-info',
   components: {

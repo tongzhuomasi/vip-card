@@ -19,20 +19,20 @@
       </mu-list-item>
       <!--列表项-->
       <mu-list-item class="mu-list-item" title="充值" @click="onCharge">
-        <img src="../../../static/charge.png" alt="充值" slot="left">
-        <img src="../../../static/arrow.png" alt="图标" slot="right">
+        <img src="../../../../static/charge.png" alt="充值" slot="left">
+        <img src="../../../../static/arrow.png" alt="图标" slot="right">
       </mu-list-item>
       <!--列表项-->
       <mu-list-item class="mu-list-item" title="提现" @click="onWithdraw">
-        <img src="../../../static/pop.png" alt="提现" slot="left">
-        <img src="../../../static/arrow.png" alt="图标" slot="right">
+        <img src="../../../../static/pop.png" alt="提现" slot="left">
+        <img src="../../../../static/arrow.png" alt="图标" slot="right">
       </mu-list-item>
     </mu-list>
   </div>
 </template>
 
 <script>
-import jtHeader from '../jtHeader'
+import jtHeader from '../../jtHeader'
 import walletHeader from './walletHeader'
 
 export default {
@@ -49,10 +49,10 @@ export default {
   },
   methods: {
     onCharge () {
-      console.log('充值了')
+      this.$router.push({path: '/home/wallet/charge'}) // 跳转到充值
     },
     onWithdraw () {
-      console.log('提现了')
+      this.$router.push({path: '/home/wallet/withdraw'}) // 跳转到提现
     }
   }
 }
