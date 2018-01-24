@@ -49,7 +49,7 @@ export default {
       // 主页选项
       options1: [
         {
-          name: 'home',
+          name: 'personalInfo',
           icon: '../../static/opt1.png',
           title: '个人信息'
         }, {

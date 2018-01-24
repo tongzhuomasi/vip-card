@@ -18,7 +18,7 @@
         <mu-icon value="13022222222" slot="right"/>
       </mu-list-item>
       <!--列表项-->
-      <mu-list-item class="mu-list-item" title="我的推荐码">
+      <mu-list-item class="mu-list-item" title="我的推荐码" @click="onClickInvitationCode">
         <mu-icon value="chat_bubble" slot="right"/>
       </mu-list-item>
       <!--列表项-->
@@ -27,7 +27,7 @@
       </mu-list-item>
     </mu-list>
     <!--推出登陆按钮-->
-    <mt-button class="jt-logoff-btn" type="primary" v-on="{click: onClickBtn}">退出登陆</mt-button>
+    <mt-button class="jt-logoff-btn" type="primary" v-on="{click: onClickLogoffBtn}">退出登陆</mt-button>
   </div>
 </template>
 
@@ -46,8 +46,13 @@ export default {
     }
   },
   methods: {
-    onClickBtn () {
+    // 点击退出登陆
+    onClickLogoffBtn () {
       this.$router.push({path: '/'})
+    },
+    // 点击我的邀请码
+    onClickInvitationCode () {
+      this.$router.push({path: '/home/personalInfo/myInvitationCode'})
     }
   }
 }
