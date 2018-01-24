@@ -27,6 +27,8 @@
           <p class="jt-title">{{option.title}}</p>
         </button>
       </div>
+      <!--背景图片-->
+      <img class="bg-img" src="../../../static/bg-home.png" alt="背景图">
     </div>
     <!--尾部选项卡-->
     <jt-bottom/>
@@ -34,8 +36,8 @@
 </template>
 
 <script>
-import jtHeader from './jtHeader'
-import jtBottom from './jtBottom'
+import jtHeader from '../jtHeader'
+import jtBottom from '../jtBottom'
 
 export default {
   name: 'home',
@@ -48,22 +50,22 @@ export default {
       // 主页选项
       options1: [
         {
-          path: 'personalInfo/personalInfo',
+          path: 'personalInfo',
           icon: '../../static/opt1.png',
           title: '个人信息'
         }, {
-          path: 'myGroup/myGroup',
+          path: 'myGroup',
           icon: '../../static/opt2.png',
           title: '我的团队'
         }
       ],
       options2: [
         {
-          path: 'purchaseRecord/purchaseRecord',
+          path: 'purchaseRecord',
           icon: '../../static/opt3.png',
           title: '消费记录'
         }, {
-          path: 'wallet/wallet',
+          path: 'wallet',
           icon: '../../static/opt4.png',
           title: '我的钱包'
         }
@@ -93,11 +95,9 @@ export default {
     width: 100%;
     height: 100vh;
     @include jt-flex(column, nowrap, space-between, stretch);
-    background: url("../../static/bg-home.png");
-    background-size: cover;
   }
 
-  /*首页容器*/
+  /*首页主体*/
   .home-body {
     position: absolute;
     top: 50px;
@@ -106,11 +106,19 @@ export default {
     right: 0;
     @include jt-flex(column, nowrap, space-around, center)
   }
-
+  /*背景图*/
+  .bg-img {
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
   /*二维码*/
   .jt-qrcode {
     width: 80vw;
     height: 20vh;
+    border-radius: 5px;
   }
 
   /*选项容器上*/
@@ -138,6 +146,7 @@ export default {
     border: 0;
     margin: 0 0.5%;
     padding: 0;
+    outline: none;
   }
 
   /*图标*/

@@ -29,7 +29,7 @@ export default {
   methods: {
     // 点击登陆按钮
     onClickBtn () {
-      this.$router.push({path: 'home'})
+      this.$router.push({path: '/home'})
     }
   }
 }
