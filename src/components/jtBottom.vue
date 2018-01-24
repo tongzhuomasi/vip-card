@@ -1,7 +1,7 @@
 <template>
   <mt-tabbar v-model="selected">
     <!--会员-->
-    <mt-tab-item id="vip" @click="onClickVip">
+    <mt-tab-item id="home" @click="onClickVip">
       <div slot="icon" class="jt-bottom-icon-container">
         <img class="jt-bottom-icon" src="../../static/vip-selected.png">
       </div>
