@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'personal-info-header',
+  name: 'jt-sub-header',
   props: ['title'],
   methods: {
     // 点击返回

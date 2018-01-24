@@ -13,7 +13,8 @@ export default new Router({
   routes: [
     { path: '/', name: 'login', component: login }, // 登陆页面
     { path: '/home', name: 'home', component: home }, // 首页
-    { path: '/home/home', component: personalInfo }, // 个人信息
+    { path: '/home/personalInfo', component: personalInfo }, // 个人信息
+    { path: '/home/personalInfo/myInvitationCode', component: personalInfo }, // 我的邀请码
     { path: '/home/myGroup', component: myGroup }, // 我的团队
     { path: '/home/record', component: record }, // 消费记录
     { path: '/home/wallet', component: wallet } // 我的钱包

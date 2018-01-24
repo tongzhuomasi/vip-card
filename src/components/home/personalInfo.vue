@@ -7,7 +7,7 @@
       <!--列表头容器-->
       <mu-sub-header class="mu-list-header">
         <!--子导航-->
-        <personal-info-header :title="title"></personal-info-header>
+        <jt-sub-header :title="title"></jt-sub-header>
       </mu-sub-header>
       <!--列表项-->
       <mu-list-item class="mu-list-item" title="Megumi">
@@ -33,12 +33,12 @@
 
 <script>
 import jtHeader from '../jtHeader'
-import personalInfoHeader from './personalInfoHeader'
+import jtSubHeader from '../jtSubHeader'
 export default {
   name: 'personal-info',
   components: {
     jtHeader,
-    personalInfoHeader
+    jtSubHeader
   },
   data () {
     return {

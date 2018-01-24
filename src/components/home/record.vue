@@ -6,7 +6,7 @@
     <!--列表头容器-->
     <mu-sub-header class="mu-list-header">
       <!--子导航-->
-      <record-header :title="title"></record-header>
+      <jt-sub-header :title="title"></jt-sub-header>
     </mu-sub-header>
     <!--列表项-->
     <mu-list-item class="mu-list-item">
@@ -24,12 +24,12 @@
 
 <script>
 import jtHeader from '../jtHeader'
-import recordHeader from './recordHeader'
+import jtSubHeader from '../jtSubHeader'
 export default {
   name: 'record',
   components: {
     jtHeader,
-    recordHeader
+    jtSubHeader
   },
   data () {
     return {
