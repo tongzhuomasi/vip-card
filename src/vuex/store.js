@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    activeTab: 'financing' // 当前tab选项
+    activeTab: 'home' // 当前tab选项
   },
   getters: {
   },

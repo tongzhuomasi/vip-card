@@ -8,17 +8,17 @@
         <p class="top-left-middle">2.14</p>
         <p class="top-left-bottom">总金额(元): 24000</p>
       </div>
-      <mt-button class="top-right">钱包账户</mt-button>
+      <mt-button class="top-right" @click="onClickAccount">钱包账户</mt-button>
     </div>
     <!--精选推荐按钮-->
     <button class="middle-button">精选推荐</button>
     <!--列表容器-->
     <div class="list-container">
       <!--列表项-->
-      <div class="list-item" v-for="i in 3" :key="i">
+      <div class="list-item" @click="onClickItem(i)" v-for="i in 3" :key="i">
         <div class="item-left-container">
-          <p class="item-left-top">{{i}}国寿安鑫盈360天</p>
-          <p class="item-left-middle">5.631%</p>
+          <p class="item-left-top">国寿安鑫盈360天</p>
+          <p class="item-left-middle">5.63{{i}}%</p>
           <p class="item-left-bottom">七日年化</p>
         </div>
         <div class="item-middle-container">
@@ -37,8 +37,17 @@
 export default {
   name: 'financing',
   methods: {
+    // 跳转我的持有页面
     onClickHold () {
       this.$router.push({path: '/financing/hold'})
+    },
+    // 跳转钱包账户页面
+    onClickAccount () {
+      this.$router.push({path: '/financing/account'})
+    },
+    // 点击了列表项
+    onClickItem (i) {
+      console.log(`点击了列表项${i}`)
     }
   }
 }
@@ -63,7 +72,7 @@ export default {
     @include jt-flex(row, nowrap, space-between, center);
     background: url("../../../static/bg-f.png");
     background-size: cover;
-    height: 24vh;
+    height: 25vh;
     padding: 5vw;
   }
 

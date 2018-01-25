@@ -107,25 +107,25 @@ export default {
   /*二维码*/
   .jt-qrcode {
     width: 80vw;
-    height: 20vh;
+    height: 25vh;
+    margin: 5vh;
     border-radius: 5px;
   }
 
   /*选项容器上*/
   .jt-options1 {
-    width: 80vw;
-    height: 20vh;
+    width: 80%;
+    height: 30%;
     @include jt-flex(row, nowrap, space-around, center);
     background-color: transparent;
   }
 
   /*选项容器下*/
   .jt-options2 {
-    width: 80vw;
-    height: 20vh;
+    width: 80%;
+    height: 30%;
     @include jt-flex(row, nowrap, space-around, center);
     background-color: transparent;
-    margin-bottom: 20vh;
   }
 
   /*选项*/

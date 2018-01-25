@@ -52,7 +52,7 @@
 </template>
 
 <script>
-import jtHeader from '../jtHeader'
+import jtHeader from '../../jtHeader'
 export default {
   name: 'hold',
   components: {
@@ -83,7 +83,7 @@ export default {
   /*顶部容器*/
   .top-container {
     @include jt-flex(row, nowrap, space-between, center);
-    background: url("../../../static/bg-f.png");
+    background: url("../../../../static/bg-f.png");
     background-size: cover;
     height: 24vh;
     padding: 5vw;
@@ -148,10 +148,11 @@ export default {
   }
   /*列表项容器*/
   .list-item {
-    margin: 0 2vw;
+    margin: 1vh 2vw;
     padding: 2vw;
+    border: 1px solid rgba(0, 0, 0, 0.2);
     @include jt-flex(row, nowrap, space-between, center);
-    box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
 
   /*列表项左侧容器*/

@@ -19,7 +19,10 @@ import charge from '../components/home/wallet/charge' // 充值
 import withdraw from '../components/home/wallet/withdraw' // 提现
 // 理财
 import financing from '../components/financing/financing' // 理财
-import hold from '../components/financing/hold' // 持有
+// 持有及其子页面
+import hold from '../components/financing/hold/hold' // 持有
+// 钱包账户及其子页面
+import account from '../components/financing/account/account' // 钱包账户
 
 Vue.use(Router)
 
@@ -45,6 +48,9 @@ export default new Router({
     { path: '/home/wallet/withdraw', component: withdraw }, // 提现
     // 理财
     { path: '/financing', name: 'financing', component: financing }, // 理财
-    { path: '/financing/hold', name: 'hold', component: hold } // 理财
+    // 我的持有及其子页面
+    { path: '/financing/hold', name: 'hold', component: hold }, // 我的持有
+    // 钱包账户及其子页面
+    { path: '/financing/account', name: 'account', component: account } // 钱包账户
   ]
 })

@@ -1,5 +1,5 @@
 <template>
-  <mt-tabbar class="jt-bottom-container" v-model="selectedTab">
+  <mt-tabbar class="jt-bottom-container" v-model="activeTab">
     <!--会员-->
     <mt-tab-item id="home">
       <div slot="icon" class="jt-bottom-icon-container">
@@ -21,12 +21,12 @@ export default {
   name: 'bottom-navigation',
   data () {
     return {
-      selectedTab: 'home'
+      activeTab: this.$store.state.activeTab
     }
   },
   watch: {
     // 监听selected
-    selectedTab (value) {
+    activeTab (value) {
       // 提交mutation
       this.$store.commit('changeActive', value)
     }
