@@ -83,7 +83,7 @@ export default {
   /*首页容器*/
   .home-container {
     width: 100%;
-    height: 90vh;
+    height: 100%;
     @include jt-flex(column, nowrap, space-between, stretch);
   }
 
@@ -125,7 +125,7 @@ export default {
     height: 20vh;
     @include jt-flex(row, nowrap, space-around, center);
     background-color: transparent;
-    margin-bottom: 10vh;
+    margin-bottom: 20vh;
   }
 
   /*选项*/

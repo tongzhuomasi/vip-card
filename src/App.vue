@@ -11,7 +11,15 @@ export default {
 </script>
 
 <style lang="scss">
-#app {
-  font-size: 18px;
-}
+  @mixin jt-flex($dir, $wrap, $main, $cross) {
+    display: flex;
+    flex-flow: $dir $wrap;
+    justify-content: $main;
+    align-items: $cross;
+  }
+  #app {
+    font-size: 18px;
+    width: 100vw;
+    height: 100vh;
+  }
 </style>

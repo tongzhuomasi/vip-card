@@ -5,11 +5,15 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    active: 'home'
+    activeTab: 'financing' // 当前tab选项
   },
   getters: {
   },
   mutations: {
+    // 更改tab选项卡
+    changeActive (state, value) {
+      this.state.activeTab = value
+    }
   },
   actions: {
   }

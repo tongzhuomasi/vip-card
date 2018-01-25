@@ -1,6 +1,8 @@
 <template>
-  <!--理财容器-->
-  <div class="financing-container">
+  <!--持有容器-->
+  <div class="hold-container">
+    <!--导航-->
+    <jt-header :title="title"></jt-header>
     <!--顶部容器-->
     <div class="top-container">
       <div class="top-left-container">
@@ -8,10 +10,13 @@
         <p class="top-left-middle">2.14</p>
         <p class="top-left-bottom">总金额(元): 24000</p>
       </div>
-      <mt-button class="top-right">钱包账户</mt-button>
+      <div class="top-right">
+        <p class="top-right-top">持有收益(元)</p>
+        <p class="top-right-bottom">88.6</p>
+      </div>
     </div>
-    <!--精选推荐按钮-->
-    <button class="middle-button">精选推荐</button>
+    <!--我的持有按钮-->
+    <button class="middle-button">我的持有</button>
     <!--列表容器-->
     <div class="list-container">
       <!--列表项-->
@@ -20,25 +25,42 @@
           <p class="item-left-top">{{i}}国寿安鑫盈360天</p>
           <p class="item-left-middle">5.631%</p>
           <p class="item-left-bottom">七日年化</p>
+          <p class="item-left-four">56天后到期</p>
         </div>
         <div class="item-middle-container">
           <p class="item-middle-top">360天</p>
           <p class="item-middle-bottom">锁定期</p>
         </div>
-        <p class="item-right">1000起购</p>
+        <!--列表项右侧-->
+        <div class="item-right-container">
+          <!--列表项右侧左-->
+          <div class="item-right-left-container">
+            <p class="item-right-left-top">购买金额(元): </p>
+            <p class="item-right-left-middle">昨日收益(元): </p>
+            <p class="item-right-left-bottom">累计收益(元): </p>
+          </div>
+          <!--列表项右侧右-->
+          <div class="item-right-right-container">
+            <p class="item-right-right-top">12000</p>
+            <p class="item-right-right-middle">0.12</p>
+            <p class="item-right-right-bottom">8.12</p>
+          </div>
+        </div>
       </div>
     </div>
-    <!--持有按钮-->
-    <mt-button class="right-btn" @click="onClickHold"></mt-button>
   </div>
 </template>
 
 <script>
+import jtHeader from '../jtHeader'
 export default {
-  name: 'financing',
-  methods: {
-    onClickHold () {
-      this.$router.push({path: '/financing/hold'})
+  name: 'hold',
+  components: {
+    jtHeader
+  },
+  data () {
+    return {
+      title: '持有'
     }
   }
 }
@@ -52,8 +74,8 @@ export default {
     align-items: $cross;
   }
 
-  /*理财容器*/
-  .financing-container {
+  /*持有容器*/
+  .hold-container {
     width: 100vw;
     height: 100%;
   }
@@ -95,15 +117,18 @@ export default {
   /*顶部右侧*/
   .top-right {
     color: white;
-    background-color: transparent;
-    font-size: 0.75rem;
-    border: 1px solid white;
-    outline: none;
-    padding: 0 20px;
-    height: 30px;
-    border-radius: 15px;
+    p {
+      margin: 0;
+    }
   }
-
+  /*顶部右侧上*/
+  .top-right-top {
+    font-size: 0.75rem;
+  }
+  /*顶部右侧下*/
+  .top-right-bottom {
+    font-size: 1.5rem;
+  }
   /*中间精选推荐按钮*/
   .middle-button {
     color: gray;
@@ -118,13 +143,13 @@ export default {
   /*列表容器*/
   .list-container {
     width: 100%;
-    height: 45vh;
+    height: 60vh;
     overflow: scroll;
   }
   /*列表项容器*/
   .list-item {
-    margin: 0 3vw;
-    padding: 10px;
+    margin: 0 2vw;
+    padding: 2vw;
     @include jt-flex(row, nowrap, space-between, center);
     box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.2);
   }
@@ -152,6 +177,11 @@ export default {
   .item-left-bottom {
     font-size: 0.75rem;
   }
+  /*列表项左侧第四个*/
+  .item-left-four {
+    font-size: 0.75rem;
+    color: darkred;
+  }
 
   /*列表项中间容器*/
   .item-middle-container {
@@ -171,22 +201,34 @@ export default {
   .item-middle-bottom {
     font-size: 0.75rem;
   }
-
-  /*列表项右侧*/
-  .item-right {
-    margin: 0;
-    text-align: center;
+  /*列表项右侧容器*/
+  .item-right-container {
+    @include jt-flex(row, nowrap, center, center);
   }
-
-  /*底部右侧按钮*/
-  .right-btn {
-    float: right;
-    width: 40px;
-    height: 40px;
-    margin-right: 10vw;
-    border-radius: 25px;
-    background: url("../../../static/btn-archive.png");
-    background-position: center, center;
-    background-size: cover;
+  /*列表项右侧左容器*/
+  .item-right-left-container {
+    @include jt-flex(column, nowrap, center, flex-start);
+    margin: 1vw;
+    p {
+      margin: 0;
+      font-size: 0.75rem;
+    }
+    /*列表项右侧左中/列表项右侧左下*/
+    .item-right-left-middle, .item-right-left-bottom {
+      color: gray;
+    }
+  }
+  /*列表项右侧右容器*/
+  .item-right-right-container {
+    @include jt-flex(column, nowrap, center, flex-start);
+    margin: 1vw;
+    p {
+      margin: 0;
+      font-size: 0.75rem;
+    }
+  }
+  /*列表项右侧右中/列表项右侧右下*/
+  .item-right-right-middle, .item-right-right-bottom{
+    color: red;
   }
 </style>

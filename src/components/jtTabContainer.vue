@@ -1,15 +1,15 @@
 <template>
   <!--tab容器-->
   <div class="jtTabContainer">
-    <jt-header :title="active"></jt-header>
-    <mt-tab-container v-model="active">
+    <jt-header :title="activeTab"></jt-header>
+    <mt-tab-container v-model="activeTab">
       <!--首页容器-->
-      <mt-tab-container-item id="home">
+      <mt-tab-container-item class="tab-container" id="home">
         <!--首页-->
         <home></home>
       </mt-tab-container-item>
       <!--理财容器-->
-      <mt-tab-container-item id="financing">
+      <mt-tab-container-item class="tab-container" id="financing">
         <!--理财-->
         <financing></financing>
       </mt-tab-container-item>
@@ -34,10 +34,17 @@ export default {
   },
   data () {
     return {
-      active: 'home'
+
     }
   },
   computed: {
+    activeTab: {
+      get () {
+        return this.$store.state.activeTab
+      },
+      set () {
+      }
+    }
   }
 }
 </script>
@@ -48,5 +55,9 @@ export default {
     flex-flow: $dir $wrap;
     justify-content: $main;
     align-items: $cross;
+  }
+  .tab-container {
+    @include jt-flex(row, nowrap, center, stretch);
+    height: 84vh
   }
 </style>

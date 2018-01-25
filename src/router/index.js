@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 import login from '../components/login' // 登陆
 import jtTabContainer from '../components/jtTabContainer' // tab容器
 // 个人信息及其子页面
@@ -18,6 +19,7 @@ import charge from '../components/home/wallet/charge' // 充值
 import withdraw from '../components/home/wallet/withdraw' // 提现
 // 理财
 import financing from '../components/financing/financing' // 理财
+import hold from '../components/financing/hold' // 持有
 
 Vue.use(Router)
 
@@ -42,6 +44,7 @@ export default new Router({
     { path: '/home/wallet/charge', component: charge }, // 充值
     { path: '/home/wallet/withdraw', component: withdraw }, // 提现
     // 理财
-    { path: '/financing', name: 'financing', component: financing } // 理财
+    { path: '/financing', name: 'financing', component: financing }, // 理财
+    { path: '/financing/hold', name: 'hold', component: hold } // 理财
   ]
 })

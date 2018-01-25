@@ -46,7 +46,7 @@ export default {
   /*登陆容器*/
   .login-container {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     @include jt-flex(column, center, center);
     background: url("../../static/bg-login.png");
     background-size: cover;
