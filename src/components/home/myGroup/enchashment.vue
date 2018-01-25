@@ -45,26 +45,28 @@
     </mu-list>
     <!--申请提现按钮-->
     <mt-button class="enchashment-apply-btn" @click="onEnchashmentApply">申请提现</mt-button>
+    <!--申请提现弹出框-->
+    <apply-dialog></apply-dialog>
   </div>
 </template>
 
 <script>
 import jtHeader from '../../jtHeader'
 import jtSubHeader from '../../jtSubHeader'
-import enchashmentApplyDialog from './enchashmentApplyDialog'
+import applyDialog from './applyDialog'
+import {mapMutations} from '../../../vuex/store'
 export default {
   name: 'enchashment',
   components: {
     jtHeader,
     jtSubHeader,
-    enchashmentApplyDialog
+    applyDialog
   },
   data () {
     return {
       title: '提现', // 导航标题
       point: 1, // 兑换比率
-      money: 1, // 兑换比率
-      enchashmentApplyDialog: false // 是否弹出提现申请对话框
+      money: 1 // 兑换比率
     }
   },
   methods: {
@@ -73,13 +75,7 @@ export default {
       console.log('点击更改账户！')
     },
     // 点击申请提现
-    onEnchashmentApply () {
-      console.log('点击申请提现...')
-      this.enchashmentApplyDialog = true
-    },
-    closeEnchashmentApplyDialog () {
-      this.dialog = false
-    }
+    ...mapMutations(['switchDialog'])
   }
 }
 </script>

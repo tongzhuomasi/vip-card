@@ -23,7 +23,8 @@ import financing from '../components/financing/financing' // 理财
 import hold from '../components/financing/hold/hold' // 持有
 // 钱包账户及其子页面
 import account from '../components/financing/account/account' // 钱包账户
-
+// 精选推荐及其子页面
+import recommend from '../components/financing/recommend/recommend' // 精选推荐
 Vue.use(Router)
 
 export default new Router({
@@ -51,6 +52,8 @@ export default new Router({
     // 我的持有及其子页面
     { path: '/financing/hold', name: 'hold', component: hold }, // 我的持有
     // 钱包账户及其子页面
-    { path: '/financing/account', name: 'account', component: account } // 钱包账户
+    { path: '/financing/account', name: 'account', component: account }, // 钱包账户
+    // 精选推荐及其子页面
+    { path: '/financing/recommend', name: 'recommend', component: recommend } // 精选推荐
   ]
 })

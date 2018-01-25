@@ -47,7 +47,7 @@ export default {
     },
     // 点击了列表项
     onClickItem (i) {
-      console.log(`点击了列表项${i}`)
+      this.$router.push({path: '/financing/recommend'})
     }
   }
 }

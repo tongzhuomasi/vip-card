@@ -63,9 +63,8 @@ export default {
     }
   },
   methods: {
+    // 路由跳转
     onClickOption ({path}) {
-      console.log(`/home/${path}`)
-      // 路由跳转
       this.$router.push({path: `/home/${path}`})
     }
   }
