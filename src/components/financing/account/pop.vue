@@ -1,7 +1,7 @@
 <template>
   <div class="pop-container">
     <!--主导航-->
-    <jt-header :title="title"></jt-header>
+    <!--<jt-header :title="title"></jt-header>-->
     <!--子导航-->
     <jt-sub-header :title="title"></jt-sub-header>
     <!--下部容器-->
@@ -134,7 +134,7 @@ export default {
   }
   /*额外添加下部*/
   .extra-bottom {
-    width: 100%;
+    width: 90%;
     margin: 10px;
   }
 </style>

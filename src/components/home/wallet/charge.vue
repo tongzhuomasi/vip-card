@@ -1,7 +1,5 @@
 <template>
   <div class="charge-container">
-    <!--主导航-->
-    <jt-header :title="title"></jt-header>
     <!--子导航-->
     <jt-sub-header :title="title"></jt-sub-header>
     <!--下部容器-->
@@ -11,6 +9,14 @@
         <div class="bottom-top-middle-container">
           <img class="bottom-top-middle-left" src="../../../../static/rmb.png" alt="钱币图标">
           <input class="bottom-top-middle-right" type="text">
+        </div>
+        <div class="extra-container">
+          <div class="extra-item-container" v-for="i in 3" :key="i">
+            <div class="extra-item-inner-container" v-for="j in 2" :key="j">
+              <p class="extra-item-inner-left">充值</p>
+              <p class="extra-item-inner-right">1000</p>
+            </div>
+          </div>
         </div>
         <p class="bottom-top-bottom">支付方式</p>
       </div>
@@ -24,13 +30,11 @@
 </template>
 
 <script>
-import jtHeader from '../../jtHeader'
 import jtSubHeader from '../../jtSubHeader'
 
 export default {
   name: 'charge',
   components: {
-    jtHeader,
     jtSubHeader
   },
   data () {
@@ -139,6 +143,40 @@ export default {
     margin: 20% 10%;
     background-color: chocolate;
     color: white;
+  }
+  /*追加容器*/
+  .extra-container {
+    margin: 5% 0;
+    width: 100%;
+    height: 15%;
+    @include jt-flex(row, nowrap, space-around, center)
+  }
+  /*追加项容器*/
+  .extra-item-container {
+    width: 30%;
+    height: 100%;
+    box-shadow: 0 0 5px cornflowerblue;
+    border-radius: 5px;
+    @include jt-flex(column, nowrap, flex-start, center)
+
+  }
+  /*追加项容器内容器*/
+  .extra-item-inner-container {
+    width: 100%;
+    @include jt-flex(row, nowrap, center, baseline);
+    p {
+      margin: 0;
+    }
+  }
+  /*追加项左侧文字*/
+  .extra-item-inner-left {
+    font-size: 0.75rem;
+    color: gray;
+  }
+  /*追加项右侧文字*/
+  .extra-item-inner-right {
+    font-size: 1.5rem;
+    color: rgba(255,74,35,0.74);
   }
 
 </style>

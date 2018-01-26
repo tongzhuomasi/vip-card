@@ -20,8 +20,9 @@ export default {
 <style scoped lang="scss">
   .personal-info-header {
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: transparent;
     color: rgba(0, 0, 0, 0.7);
-    height: 8%;
+    height: 10vh;
+    font-weight: bolder;
   }
 </style>

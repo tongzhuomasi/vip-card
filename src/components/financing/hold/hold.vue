@@ -1,18 +1,20 @@
 <template>
   <!--持有容器-->
   <div class="hold-container">
-    <!--导航-->
-    <jt-header :title="title"></jt-header>
-    <!--顶部容器-->
-    <div class="top-container">
-      <div class="top-left-container">
-        <p class="top-left-top">昨日收益(元)</p>
-        <p class="top-left-middle">2.14</p>
-        <p class="top-left-bottom">总金额(元): 24000</p>
-      </div>
-      <div class="top-right">
-        <p class="top-right-top">持有收益(元)</p>
-        <p class="top-right-bottom">88.6</p>
+    <div class="extra-container">
+      <!--导航-->
+      <jt-sub-header :title="title"></jt-sub-header>
+      <!--顶部容器-->
+      <div class="top-container">
+        <div class="top-left-container">
+          <p class="top-left-top">昨日收益(元)</p>
+          <p class="top-left-middle">2.14</p>
+          <p class="top-left-bottom">总金额(元): 24000</p>
+        </div>
+        <div class="top-right">
+          <p class="top-right-top">持有收益(元)</p>
+          <p class="top-right-bottom">88.6</p>
+        </div>
       </div>
     </div>
     <!--我的持有按钮-->
@@ -52,11 +54,11 @@
 </template>
 
 <script>
-import jtHeader from '../../jtHeader'
+import jtSubHeader from '../../jtSubHeader'
 export default {
   name: 'hold',
   components: {
-    jtHeader
+    jtSubHeader
   },
   data () {
     return {
@@ -73,7 +75,13 @@ export default {
     justify-content: $main;
     align-items: $cross;
   }
-
+  /*额外容器*/
+  .extra-container {
+    @include jt-flex(column, nowrap, flex-start, center);
+    width: 100%;
+    background: url("../../../../static/bg-f.png");
+    background-size: cover;
+  }
   /*持有容器*/
   .hold-container {
     width: 100vw;
@@ -83,10 +91,10 @@ export default {
   /*顶部容器*/
   .top-container {
     @include jt-flex(row, nowrap, space-between, center);
-    background: url("../../../../static/bg-f.png");
-    background-size: cover;
+    background-color: transparent;
+    width: 100%;
     height: 24vh;
-    padding: 5vw;
+    padding: 2vw 5vw;
   }
 
   /*顶部左侧容器*/
@@ -143,7 +151,7 @@ export default {
   /*列表容器*/
   .list-container {
     width: 100%;
-    height: 60vh;
+    height: 58vh;
     overflow: scroll;
   }
   /*列表项容器*/

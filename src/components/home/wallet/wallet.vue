@@ -1,8 +1,6 @@
 <template>
   <!--我的钱包-->
   <div class="wallet-container">
-    <!--导航-->
-    <jt-header :title="title"></jt-header>
     <!--我的钱包列表-->
     <mu-list>
       <!--列表头容器-->
@@ -32,13 +30,11 @@
 </template>
 
 <script>
-import jtHeader from '../../jtHeader'
 import walletHeader from './walletHeader'
 
 export default {
   name: 'wallet',
   components: {
-    jtHeader,
     walletHeader
   },
   data () {

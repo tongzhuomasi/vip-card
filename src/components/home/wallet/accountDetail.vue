@@ -1,7 +1,6 @@
 <template>
   <!--账户明细-->
   <div class="account-container">
-    <jt-header :title="title"></jt-header>
     <!--消费记录列表-->
     <mu-list>
       <!--列表头容器-->
@@ -27,12 +26,10 @@
 </template>
 
 <script>
-import jtHeader from '../../jtHeader'
 import jtSubHeader from '../../jtSubHeader'
 export default {
   name: 'enchashment-record',
   components: {
-    jtHeader,
     jtSubHeader
   },
   data () {

@@ -1,7 +1,7 @@
 <template>
   <!--提现-->
   <div class="enchashment-container">
-    <jt-header :title="title"></jt-header>
+
     <!--提现列表-->
     <mu-list>
       <!--列表头容器-->
@@ -53,7 +53,7 @@
 </template>
 
 <script>
-import jtHeader from '../../jtHeader'
+
 import jtSubHeader from '../../jtSubHeader'
 import applyDialog from './applyDialog'
 import accountDialog from './accountDialog'
@@ -61,7 +61,6 @@ import accountDialog from './accountDialog'
 export default {
   name: 'enchashment',
   components: {
-    jtHeader,
     jtSubHeader,
     applyDialog,
     accountDialog

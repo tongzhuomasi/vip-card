@@ -2,7 +2,7 @@
   <!--我的账户容器-->
   <div class="hold-container">
     <!--导航-->
-    <jt-header :title="title"></jt-header>
+    <!--<jt-header :title="title"></jt-header>-->
     <!--子导航-->
     <account-header :title="title"></account-header>
     <!--顶部容器-->
@@ -66,10 +66,9 @@ export default {
     // 跳转到提现
     onClickTixian () {
       this.$router.push({path: '/financing/account/pop'})
-      console.log('点击了提现')
     },
     onClickChakan () {
-      console.log('点击了查看')
+      this.$router.push({path: '/financing/hold'})
     }
   }
 }

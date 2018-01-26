@@ -1,8 +1,6 @@
 <template>
   <!--个人信息-->
   <div class="personalInfo-container">
-    <!--导航-->
-    <jt-header :title="title"></jt-header>
     <!--个人信息列表-->
     <mu-list>
       <!--列表头容器-->
@@ -35,12 +33,10 @@
 </template>
 
 <script>
-import jtHeader from '../../jtHeader'
 import jtSubHeader from '../../jtSubHeader'
 export default {
   name: 'personal-info',
   components: {
-    jtHeader,
     jtSubHeader
   },
   data () {

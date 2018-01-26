@@ -1,8 +1,6 @@
 <template>
   <!--我的团队-->
   <div class="myGroup-container">
-    <!--导航-->
-    <jt-header :title="title"></jt-header>
     <!--我的团队列表-->
     <mu-list>
       <!--列表头容器-->
@@ -34,13 +32,11 @@
 </template>
 
 <script>
-import jtHeader from '../../jtHeader'
 import myGroupHeader from './myGroupHeader'
 
 export default {
   name: 'my-group',
   components: {
-    jtHeader,
     myGroupHeader
   },
   data () {

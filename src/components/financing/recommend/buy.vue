@@ -1,7 +1,5 @@
 <template>
   <div class="buy-container">
-    <!--主导航-->
-    <jt-header :title="title"></jt-header>
     <!--子导航-->
     <jt-sub-header :title="title"></jt-sub-header>
     <!--上部容器-->
@@ -29,13 +27,11 @@
 </template>
 
 <script>
-import jtHeader from '../../jtHeader'
 import jtSubHeader from '../../jtSubHeader'
 
 export default {
   name: 'buy',
   components: {
-    jtHeader,
     jtSubHeader
   },
   data () {

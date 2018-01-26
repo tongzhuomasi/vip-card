@@ -1,7 +1,7 @@
 <template>
   <!--提现记录-->
   <div class="record-container">
-    <jt-header :title="title"></jt-header>
+    <!--<jt-header :title="title"></jt-header>-->
     <!--提现记录列表-->
     <mu-list>
       <!--列表头容器-->

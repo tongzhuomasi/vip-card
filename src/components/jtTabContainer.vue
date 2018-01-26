@@ -1,7 +1,7 @@
 <template>
   <!--tab容器-->
   <div class="jtTabContainer">
-    <jt-header :title="activeTab"></jt-header>
+    <!--<jt-header :title="activeTab"></jt-header>-->
     <mt-tab-container v-model="activeTab">
       <!--首页容器-->
       <mt-tab-container-item class="tab-container" id="home">

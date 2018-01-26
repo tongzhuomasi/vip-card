@@ -1,8 +1,6 @@
 <template>
   <!--精选推荐-->
   <div class="recommend-container">
-    <!--导航-->
-    <jt-header :title="title"></jt-header>
     <!--子导航-->
     <jt-sub-header :title="title"></jt-sub-header>
     <!--顶部容器-->
@@ -38,13 +36,11 @@
 </template>
 
 <script>
-import jtHeader from '../../jtHeader'
 import jtSubHeader from '../../jtSubHeader'
 
 export default {
   name: 'recommend',
   components: {
-    jtHeader,
     jtSubHeader
   },
   data () {

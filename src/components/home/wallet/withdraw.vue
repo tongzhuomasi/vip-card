@@ -1,7 +1,6 @@
 <template>
   <!--提现-->
   <div class="withdraw-container">
-    <jt-header :title="title"></jt-header>
     <!--提现列表-->
     <mu-list>
       <!--列表头容器-->
@@ -42,13 +41,11 @@
 </template>
 
 <script>
-import jtHeader from '../../jtHeader'
 import jtSubHeader from '../../jtSubHeader'
 
 export default {
   name: 'withdraw',
   components: {
-    jtHeader,
     jtSubHeader
   },
   data () {

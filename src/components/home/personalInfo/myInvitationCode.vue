@@ -1,8 +1,6 @@
 <template>
   <!--我的邀请码-->
   <div class="my-invitation-code-container">
-    <!--主导航-->
-    <jt-header :title="title"></jt-header>
     <!--子导航-->
     <jt-subheader :title="title"></jt-subheader>
     <!--邀请码主体-->
@@ -27,12 +25,10 @@
 </template>
 
 <script>
-import jtHeader from '../../jtHeader'
 import jtSubheader from '../../jtSubHeader'
 export default {
   name: 'my-invitation-code',
   components: {
-    jtHeader,
     jtSubheader
   },
   data () {

@@ -27,7 +27,7 @@ export default {
     width: 100%;
     background-color: rgba(76, 63, 54, 0.9);
     color: rgba(255, 250, 250, 0.9);
-    height: 50px;
+    height: 10vh;
   }
 
   .account-details {
