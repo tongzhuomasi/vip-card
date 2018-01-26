@@ -11,7 +11,7 @@ import MuseUI from 'muse-ui'
 import 'muse-ui/dist/muse-ui.css'
 import echarts from 'echarts'
 
-Vue.config.productionTip = false
+Vue.config.productionTip = true
 // MintUI
 Vue.use(MintUI)
 // MuseUI

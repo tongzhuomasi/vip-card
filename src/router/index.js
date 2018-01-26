@@ -21,6 +21,7 @@ import withdraw from '../components/home/wallet/withdraw' // 提现
 import financing from '../components/financing/financing' // 理财
 // 持有及其子页面
 import hold from '../components/financing/hold/hold' // 持有
+import holdDetails from '../components/financing/hold/holdDetails' // 持有详情
 // 钱包账户及其子页面
 import account from '../components/financing/account/account' // 钱包账户
 import popRecord from '../components/financing/account/popRecord' // 提现记录
@@ -32,6 +33,7 @@ import buy from '../components/financing/recommend/buy' // 买入
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     // 登陆页面
     { path: '/', name: 'login', component: login }, // 登陆页面
@@ -55,6 +57,7 @@ export default new Router({
     { path: '/financing', name: 'financing', component: financing }, // 理财
     // 我的持有及其子页面
     { path: '/financing/hold', name: 'hold', component: hold }, // 我的持有
+    { path: '/financing/hold/holdDetails', name: 'holdDetails', component: holdDetails }, // 持有详情
     // 钱包账户及其子页面
     { path: '/financing/account', name: 'account', component: account }, // 钱包账户
     { path: '/financing/account/popRecord', name: 'popRecord', component: popRecord }, // 提现记录

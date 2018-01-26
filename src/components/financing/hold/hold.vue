@@ -22,7 +22,7 @@
     <!--列表容器-->
     <div class="list-container">
       <!--列表项-->
-      <div class="list-item" v-for="i in 3" :key="i">
+      <div class="list-item" v-for="i in 3" :key="i" @click="onClickItem()">
         <div class="item-left-container">
           <p class="item-left-top">{{i}}国寿安鑫盈360天</p>
           <p class="item-left-middle">5.631%</p>
@@ -63,6 +63,11 @@ export default {
   data () {
     return {
       title: '持有'
+    }
+  },
+  methods: {
+    onClickItem () {
+      this.$router.push({path: `/financing/hold/holdDetails`})
     }
   }
 }
