@@ -22,6 +22,6 @@ export default {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.7);
     color: rgba(0, 0, 0, 0.7);
-    height: 50px;
+    height: 8%;
   }
 </style>

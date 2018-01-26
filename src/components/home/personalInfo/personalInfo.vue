@@ -28,13 +28,6 @@
           <img src="../../../../static/arrow.png" alt="图标" slot="right">
         </div>
       </mu-list-item>
-      <!--列表项-->
-      <mu-list-item class="mu-list-item">
-        <div class="list-item">
-          <p class="list-item-left" slot="left">修改密码</p>
-          <img src="../../../../static/arrow.png" alt="图标" slot="right">
-        </div>
-      </mu-list-item>
     </mu-list>
     <!--退出登陆按钮-->
     <mt-button class="jt-logoff-btn" type="primary" v-on="{click: onClickLogoffBtn}">退出登陆</mt-button>

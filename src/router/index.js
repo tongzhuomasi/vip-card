@@ -23,8 +23,12 @@ import financing from '../components/financing/financing' // 理财
 import hold from '../components/financing/hold/hold' // 持有
 // 钱包账户及其子页面
 import account from '../components/financing/account/account' // 钱包账户
+import popRecord from '../components/financing/account/popRecord' // 提现记录
+import pop from '../components/financing/account/pop' // 提现
 // 精选推荐及其子页面
 import recommend from '../components/financing/recommend/recommend' // 精选推荐
+import buy from '../components/financing/recommend/buy' // 买入
+
 Vue.use(Router)
 
 export default new Router({
@@ -53,7 +57,10 @@ export default new Router({
     { path: '/financing/hold', name: 'hold', component: hold }, // 我的持有
     // 钱包账户及其子页面
     { path: '/financing/account', name: 'account', component: account }, // 钱包账户
+    { path: '/financing/account/popRecord', name: 'popRecord', component: popRecord }, // 提现记录
+    { path: '/financing/account/pop', name: 'pop', component: pop }, // 提现
     // 精选推荐及其子页面
-    { path: '/financing/recommend', name: 'recommend', component: recommend } // 精选推荐
+    { path: '/financing/recommend', name: 'recommend', component: recommend }, // 精选推荐
+    { path: '/financing/recommend/buy', name: 'buy', component: buy } // 买入
   ]
 })

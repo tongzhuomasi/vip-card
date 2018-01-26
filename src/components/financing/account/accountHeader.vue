@@ -17,7 +17,7 @@ export default {
     },
     // 点击提现记录
     onClickTixianJilu () {
-      console.log('点击了提现记录!')
+      this.$router.push({path: '/financing/account/popRecord'})
     }
   }
 }

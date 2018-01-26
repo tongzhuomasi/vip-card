@@ -56,6 +56,9 @@ export default {
     justify-content: $main;
     align-items: $cross;
   }
+  .jtTabContainer {
+    height: 100%;
+  }
   .tab-container {
     @include jt-flex(row, nowrap, center, stretch);
     height: 84vh

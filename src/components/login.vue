@@ -10,7 +10,7 @@
       </div>
       <div class="login-input-container">
         <img  class="login-input-icon" src="../../static/idCode.png" alt="验证码">
-        <input class="login-input login-password" type="password" placeholder="请输入密码">
+        <input class="login-input login-password" type="password" placeholder="请输入验证码">
       </div>
       <mt-button class="login-btn" type="primary" v-on="{click: onClickBtn}">
         登陆

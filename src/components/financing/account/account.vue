@@ -63,7 +63,9 @@ export default {
     }
   },
   methods: {
+    // 跳转到提现
     onClickTixian () {
+      this.$router.push({path: '/financing/account/pop'})
       console.log('点击了提现')
     },
     onClickChakan () {

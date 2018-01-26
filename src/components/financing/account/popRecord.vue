@@ -10,15 +10,15 @@
         <jt-sub-header :title="title"></jt-sub-header>
       </mu-sub-header>
       <!--列表项-->
-      <mu-list-item class="mu-list-item">
+      <mu-list-item class="mu-list-item" v-for="i in 3" :key="i">
         <div class="record-item">
           <div class="record-item-left" slot="left">
-            <p class="record-serialNumber">{{purchaseRecordItem.purchaseSerial}}</p>  <!--流水号-->
-            <p class="record-type">{{purchaseRecordItem.purchaseType.type}}提现{{purchaseRecordItem.purchaseType.money}}元</p> <!--提现类型-->
+            <p class="record-serialNumber">流水号:{{i}}{{purchaseRecordItem.purchaseSerial}}</p>  <!--流水号-->
+            <p class="record-type">{{purchaseRecordItem.purchaseType}}({{purchaseRecordItem.purchaseAccount}})</p> <!--提现类型-->
           </div>
           <div class="record-item-right" slot="right">
             <p class="record-date">{{purchaseRecordItem.purchaseDate}}</p> <!--提现日期-->
-            <p class="record-point">{{purchaseRecordItem.purchasePoint}}积分</p> <!--积分-->
+            <p class="record-point">{{purchaseRecordItem.purchasePoint}}</p> <!--积分-->
           </div>
         </div>
       </mu-list-item>
@@ -39,13 +39,11 @@ export default {
     return {
       title: '提现记录',
       purchaseRecordItem: {
-        purchaseSerial: '45236548569',
-        purchaseType: {
-          type: '微信',
-          money: 500
-        },
+        purchaseSerial: '45236548569', // 流水号
+        purchaseType: '微信',
+        purchaseAccount: '15346682554',
         purchaseDate: '2018/01/16  10:30',
-        purchasePoint: -500
+        purchasePoint: -10000
       }
     }
   }
@@ -71,13 +69,13 @@ export default {
   }
   /*列表项左侧*/
   .record-item-left {
-    width: 40vw;
+    width: 45vw;
     @include jt-flex(column, nowrap, center, center);
     /*左侧内p标签*/
     p {
       font-size: 0.75rem;
       margin: 0;
-      width: 40vw;
+      width: 45vw;
       color: dimgrey;
     }
     /*覆盖提现类型*/

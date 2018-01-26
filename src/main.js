@@ -9,11 +9,15 @@ import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import MuseUI from 'muse-ui'
 import 'muse-ui/dist/muse-ui.css'
+import echarts from 'echarts'
 
-// MintUI
 Vue.config.productionTip = false
+// MintUI
 Vue.use(MintUI)
+// MuseUI
 Vue.use(MuseUI)
+// eCharts
+Vue.prototype.$echarts = echarts
 
 /* eslint-disable no-new */
 new Vue({

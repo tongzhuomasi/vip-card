@@ -44,9 +44,11 @@
       </div>
     </mu-list>
     <!--申请提现按钮-->
-    <mt-button class="enchashment-apply-btn" @click="onEnchashmentApply">申请提现</mt-button>
+    <mt-button class="enchashment-apply-btn" @click="switchApplyDialog">申请提现</mt-button>
     <!--申请提现弹出框-->
     <apply-dialog></apply-dialog>
+    <!--更改收款账户弹出框-->
+    <account-dialog></account-dialog>
   </div>
 </template>
 
@@ -54,13 +56,15 @@
 import jtHeader from '../../jtHeader'
 import jtSubHeader from '../../jtSubHeader'
 import applyDialog from './applyDialog'
-import {mapMutations} from '../../../vuex/store'
+import accountDialog from './accountDialog'
+
 export default {
   name: 'enchashment',
   components: {
     jtHeader,
     jtSubHeader,
-    applyDialog
+    applyDialog,
+    accountDialog
   },
   data () {
     return {
@@ -72,10 +76,12 @@ export default {
   methods: {
     // 点击更改账户
     onChangeAccount () {
-      console.log('点击更改账户！')
+      this.$store.commit('switchAccountDialog')
     },
     // 点击申请提现
-    ...mapMutations(['switchDialog'])
+    switchApplyDialog () {
+      this.$store.commit('switchApplyDialog')
+    }
   }
 }
 </script>

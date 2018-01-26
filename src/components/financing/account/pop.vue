@@ -1,5 +1,5 @@
 <template>
-  <div class="charge-container">
+  <div class="pop-container">
     <!--主导航-->
     <jt-header :title="title"></jt-header>
     <!--子导航-->
@@ -7,18 +7,22 @@
     <!--下部容器-->
     <div class="bottom-container">
       <div class="bottom-top-container">
-        <p class="bottom-top-top">买入金额</p>
+        <p class="bottom-top-top">提现金额</p>
         <div class="bottom-top-middle-container">
           <img class="bottom-top-middle-left" src="../../../../static/rmb.png" alt="钱币图标">
-          <input class="bottom-top-middle-right" type="text">
+          <input class="bottom-top-middle-right" type="text" value="15000">
         </div>
-        <p class="bottom-top-bottom">支付方式</p>
+        <p class="bottom-top-bottom">收款方式</p>
       </div>
       <div class="bottom-middle-container">
         <img class="bottom-middle-left" src="../../../../static/weixin.png" alt="微信">
         <img class="bottom-middle-right" src="../../../../static/zhifubao.png" alt="支付宝">
       </div>
-      <mt-button class="bottom-bottom">确认买入</mt-button>
+      <div class="extra-container">
+        <p class="extra-top">收款账户</p>
+        <input class="bottom-top-middle-right extra-bottom" type="text">
+      </div>
+      <mt-button class="bottom-bottom">确认提现</mt-button>
     </div>
   </div>
 </template>
@@ -28,14 +32,14 @@ import jtHeader from '../../jtHeader'
 import jtSubHeader from '../../jtSubHeader'
 
 export default {
-  name: 'charge',
+  name: 'buy',
   components: {
     jtHeader,
     jtSubHeader
   },
   data () {
     return {
-      title: '充值'
+      title: '提现'
     }
   }
 }
@@ -54,29 +58,10 @@ export default {
   $top-container-height: 10%;
   $bottom-container-height: 65%;
   /*买入容器*/
-  .charge-container {
+  .pop-container {
     width: 100vw;
     height: 100vh;
     @include jt-flex(column, nowrap, flex-start, center)
-  }
-  /*上部容器*/
-  .top-container {
-    width: 100%;
-    height: $top-container-height;
-    padding: 1% 5%;
-    @include jt-flex(column, nowrap, flex-start, flex-start);
-    p {
-      margin: 0;
-    }
-  }
-  /*上部上*/
-  .top-top {
-    font-weight: bolder;
-    font-size: 1.25rem;
-  }
-  /*上部下*/
-  .top-bottom {
-    font-size: 0.75rem;
   }
   /*底部容器*/
   .bottom-container {
@@ -140,5 +125,16 @@ export default {
     background-color: chocolate;
     color: white;
   }
-
+  /*额外添加上部*/
+  .extra-top {
+    width: 100%;
+    margin: 5%;
+    font-size: 0.75rem;
+    color: gray;
+  }
+  /*额外添加下部*/
+  .extra-bottom {
+    width: 100%;
+    margin: 10px;
+  }
 </style>

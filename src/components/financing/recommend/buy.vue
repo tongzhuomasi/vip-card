@@ -1,16 +1,21 @@
 <template>
-  <div class="charge-container">
+  <div class="buy-container">
     <!--主导航-->
     <jt-header :title="title"></jt-header>
     <!--子导航-->
     <jt-sub-header :title="title"></jt-sub-header>
+    <!--上部容器-->
+    <div class="top-container">
+      <p class="top-top">国寿安鑫盈365天</p>
+      <p class="top-bottom">由中国人寿养老保险股份有限公司提供</p>
+    </div>
     <!--下部容器-->
     <div class="bottom-container">
       <div class="bottom-top-container">
         <p class="bottom-top-top">买入金额</p>
         <div class="bottom-top-middle-container">
           <img class="bottom-top-middle-left" src="../../../../static/rmb.png" alt="钱币图标">
-          <input class="bottom-top-middle-right" type="text">
+          <input class="bottom-top-middle-right" type="text" value="15000">
         </div>
         <p class="bottom-top-bottom">支付方式</p>
       </div>
@@ -28,14 +33,14 @@ import jtHeader from '../../jtHeader'
 import jtSubHeader from '../../jtSubHeader'
 
 export default {
-  name: 'charge',
+  name: 'buy',
   components: {
     jtHeader,
     jtSubHeader
   },
   data () {
     return {
-      title: '充值'
+      title: '买入'
     }
   }
 }
@@ -54,7 +59,7 @@ export default {
   $top-container-height: 10%;
   $bottom-container-height: 65%;
   /*买入容器*/
-  .charge-container {
+  .buy-container {
     width: 100vw;
     height: 100vh;
     @include jt-flex(column, nowrap, flex-start, center)
