@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-      <jt-sub-header :title="title"></jt-sub-header>
+      <!--<jt-sub-header :title="title"></jt-sub-header>-->
       <!--上部容器-->
       <div class="top-container">
         <!--上部上容器-->
@@ -17,6 +17,7 @@
           <p class="middle-top-top">金额(元)</p>
           <p class="middle-top-bottom">5660</p>
         </div>
+        <!--中间底部容器-->
         <div class="middle-bottom-container">
           <div class="middle-bottom-left-container">
             <p class="middle-bottom-left-top">昨日收益(元)</p>
@@ -86,14 +87,14 @@ export default {
   /*上部上容器*/
   .top-top-container {
     width: 100%;
-    padding: 0 5%;
+    padding: 3%;
     @include jt-flex(row, nowrap, space-between, center);
     p {
       margin: 0;
     }
   }
   .top-top-left {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bolder;
   }
   .top-top-right {
@@ -104,28 +105,87 @@ export default {
   .top-bottom {
     width: 100%;
     margin: 0;
-    padding: 0 5%;
+    padding: 0 3%;
     font-size: 0.8rem;
     color: gray;
   }
   /*中部容器*/
   .middle-container {
     width: 100%;
+    margin: 2% 0;
     height: 30%;
+    background-color: white;
+    @include jt-flex(column, nowrap, center, center);
   }
+  /*中间顶部容器*/
   .middle-top-container {
     width: 100%;
-    height: 18vh;
+    height: 50%;
+    @include jt-flex(column, nowrap, center, center);
+    p {
+      margin: 0;
+    }
   }
+  /*中间上部上*/
   .middle-top-top {
     width: 100%;
     margin: 0;
     font-size: 0.8rem;
     color: gray;
+    text-align: center;
   }
+  /*中间上部下*/
   .middle-top-bottom {
     width: 100%;
     color: red;
     font-size: 1.5rem;
+    text-align: center;
+  }
+  /*中间底部容器*/
+  .middle-bottom-container {
+    @include jt-flex(row, nowrap, center, center);
+    width: 100%;
+    height: 55%;
+  }
+  /*中间底部左/中/右容器*/
+  .middle-bottom-left-container, .middle-bottom-middle-container, .middle-bottom-right-container {
+    width: 30%;
+    height: 100%;
+    p {
+      margin: 0;
+      font-size: 0.8rem;
+      text-align: center;
+    }
+  }
+  /*中间底部左下/中下/右下*/
+  .middle-bottom-left-bottom, .middle-bottom-middle-bottom, .middle-bottom-right-bottom {
+    color: red;
+  }
+  /*底部容器*/
+  .bottom-container {
+    @include jt-flex(column, nowrap, flex-start, center);
+    width: 100%;
+    height: 58%;
+    background-color: white;
+  }
+  /*底部上/下容器*/
+  .bottom-top-container, .bottom-middle-container {
+    width: 100%;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: black;
+    @include jt-flex(row, nowrap, space-between, center);
+    p {
+      margin: 0;
+      padding: 5%;
+      font-size: 0.8rem;
+    }
+  }
+  /*底部下*/
+  .bottom-bottom {
+    width: 80%;
+    margin-top: 20%;
+    color: white;
+    background-color: chocolate;
   }
 </style>
