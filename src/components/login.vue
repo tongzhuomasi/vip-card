@@ -12,7 +12,7 @@
         <img  class="login-input-icon" src="../../static/idCode.png" alt="验证码">
         <input class="login-input login-password" type="password" placeholder="请输入验证码">
       </div>
-      <mt-button class="login-btn" type="primary" v-on="{click: onClickBtn}">
+      <mt-button class="mint-button login-btn mint-button--primary mint-button--normal" type="primary" v-on="{click: onClickBtn}">
         登陆
       </mt-button>
     </div>

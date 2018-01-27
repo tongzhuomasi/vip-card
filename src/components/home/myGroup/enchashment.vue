@@ -1,9 +1,8 @@
 <template>
   <!--提现-->
   <div class="enchashment-container">
-
     <!--提现列表-->
-    <mu-list>
+    <mu-list class="jt-list">
       <!--列表头容器-->
       <mu-sub-header class="mu-list-header">
         <!--子导航-->
@@ -92,13 +91,22 @@ export default {
     justify-content: $main;
     align-items: $cross;
   }
-  $text-color: black;
-  $line-color: gray;
+  /*黑色文字*/
+  $text-color-1: rgb(51, 51, 51);
+  /*灰色文字*/
+  $text-color-2: rgb(153, 153, 153);
+  /*更改收款账户按钮颜色*/
+  $btn-color-1: rgb(152, 93, 32);
+  /*申请提现按钮颜色*/
+  $btn-color-2: rgb(213, 162, 107);
   /*提现容器*/
   .enchashment-container {
-    position: absolute;
-    top: 0;
-    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    @include jt-flex(column, nowrap, flex-start, center);
+  }
+  /*列表*/
+  .jt-list {
     @include jt-flex(column, nowrap, flex-start, center);
   }
   /*列表头部*/
@@ -113,11 +121,10 @@ export default {
   }
   /*汇率说明*/
   .exchange-rate-description {
-    padding: 5px 0;
+    padding: 3vh 0;
     @include jt-flex(column, nowrap, flex-start, center);
     /*内部所有p标签*/
     p {
-      color: $text-color;
       margin: 0;
       padding: 0;
       width: 100%;
@@ -127,23 +134,26 @@ export default {
     /*描述上部分*/
     .description-top {
       font-size: 1rem;
+      color: $text-color-1;
     }
     /*描述下部分*/
     .description-bottom {
       font-size: 0.75rem;
+      color: $text-color-2;
     }
   }
   /*列表项*/
   .mu-list-item {
-    padding: 5px;
-    border: 0 solid $line-color;
+    width: 90%;
+    padding: 2vh;
+    border: 0 solid $text-color-2;
     border-top-width: 1px;
     @include jt-flex(row, nowrap, space-between, center);
     p {
       font-size: 0.9rem;
       width: 45vw;
       margin: 0;
-      color: $text-color;
+      color: $text-color-1;
     }
     /*列表项左侧*/
     .record-item-left {
@@ -152,20 +162,21 @@ export default {
     /*列表项右侧*/
     .record-item-right {
       text-align: right;
+      width: 55vw;
     }
     /*更改账户按钮*/
     .change-account-btn {
       border: 0 solid white;
       background-color: transparent;
       outline: none;
-      color: chocolate;
+      color: $btn-color-1;
       font-size: 0.75rem;
     }
   }
   /*申请提现按钮*/
   .enchashment-apply-btn {
     width: 80vw;
-    background-color: chocolate;
+    background-color: $btn-color-2;
     color: white;
   }
 </style>

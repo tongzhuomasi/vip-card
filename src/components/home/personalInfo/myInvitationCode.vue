@@ -12,7 +12,7 @@
         <!--邀请码-->
         <h1 class="invitation-number">{{invitationNumber}}</h1>
       </div>
-      <h2>您的推荐码</h2>
+      <h2 class="middle">您的推荐码</h2>
       <!--详细说明-->
       <div class="text-container">
         <p>邀请新人注册钻石会员卡</p>
@@ -56,13 +56,13 @@ export default {
   /*页面主体*/
   .invitation-code-body {
     width: 100vw;
-    @include jt-flex(column, nowrap, center, center);
+    @include jt-flex(column, nowrap, flex-start, center);
     position: absolute;
     top: 100px;
     bottom: 0;
     h2 {
-      font-size: 20px;
-      margin: 5px;
+      font-size: 1.5rem;
+      margin: 3vh;
     }
   }
   /*邀请码背景图容器*/
@@ -89,8 +89,8 @@ export default {
     @include jt-flex(column, nowrap, center, center);
     p {
       font-size: 14px;
-      color: dimgrey;
-      margin: 0;
+      color: rgb(102, 102, 102);
+      margin: 1px;
     }
   }
 </style>

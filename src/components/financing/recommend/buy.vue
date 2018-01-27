@@ -54,6 +54,8 @@ export default {
   /*顶部容器高度*/
   $top-container-height: 10%;
   $bottom-container-height: 65%;
+  /*按钮颜色*/
+  $button-color: rgb(213, 162, 107);
   /*买入容器*/
   .buy-container {
     width: 100vw;
@@ -138,7 +140,7 @@ export default {
   .bottom-bottom {
     width: 80%;
     margin: 20% 10%;
-    background-color: chocolate;
+    background-color: $button-color;
     color: white;
   }
 

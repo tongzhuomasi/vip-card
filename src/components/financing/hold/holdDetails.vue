@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-      <!--<jt-sub-header :title="title"></jt-sub-header>-->
+      <jt-sub-header :title="title"></jt-sub-header>
       <!--上部容器-->
       <div class="top-container">
         <!--上部上容器-->
@@ -75,7 +75,7 @@ export default {
   .container {
     width: 100vw;
     height: 100vh;
-    background-color: lightgrey;
+    padding: 0 3vw;
   }
   /*上部容器*/
   .top-container {
@@ -165,7 +165,7 @@ export default {
   .bottom-container {
     @include jt-flex(column, nowrap, flex-start, center);
     width: 100%;
-    height: 58%;
+    height: 47%;
     background-color: white;
   }
   /*底部上/下容器*/

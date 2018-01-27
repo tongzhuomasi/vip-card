@@ -25,7 +25,9 @@
       <!--列表项-->
       <mu-list-item class="mu-list-item" title="Chloe">
         <mu-avatar src="../../../static/jiatenghui.jpg" slot="leftAvatar"/>
-        <p class="mu-list-item-point" slot="right">+25积分</p>
+          <div class="item-right-container" slot="right">
+            <p class="item-right">+25积分</p>
+          </div>
       </mu-list-item>
     </mu-list>
   </div>
@@ -126,9 +128,13 @@ export default {
       margin-right: 10vh;
     }
   }
-
-  /*列表项积分*/
-  .mu-list-item-point {
+  /*列表项右侧容器*/
+  .item-right-container {
     width: 90px;
+  }
+  /*列表项积分*/
+  .item-right {
+    width: 90px;
+    margin: 0;
   }
 </style>

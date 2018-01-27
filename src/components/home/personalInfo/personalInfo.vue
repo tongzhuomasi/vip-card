@@ -96,6 +96,7 @@ export default {
   .jt-logoff-btn {
     margin-top: 10vh;
     width: 80%;
-    background-color: rgb(231, 174, 110);
+    border-radius: 5px;
+    background-color: rgb(152, 93, 32);
   }
 </style>

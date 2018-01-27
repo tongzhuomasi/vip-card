@@ -75,12 +75,12 @@ export default {
       font-size: 0.75rem;
       margin: 0;
       width: 40vw;
-      color: dimgrey;
+      color: rgb(102, 102, 102);
     }
     /*覆盖提现类型*/
     .record-type {
       font-size: 0.9rem;
-      color: black;
+      color: rgb(51, 51, 51);
       font-weight: 500;
     }
   }
@@ -94,12 +94,12 @@ export default {
       margin: 0;
       width: 40vw;
       text-align: right;
-      color: dimgrey;
+      color: rgb(102, 102, 102);
     }
     /*覆盖提现积分*/
     .record-point {
       font-size: 0.9rem;
-      color: black;
+      color: rgb(51, 51, 51);
       font-weight: 500;
     }
   }

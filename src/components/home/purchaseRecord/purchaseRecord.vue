@@ -45,7 +45,8 @@ export default {
     justify-content: $main;
     align-items: $cross;
   }
-
+  $text-color-1: rgb(102, 102, 102);
+  $text-color-2: rgb(51, 51, 51);
   /*消费记录容器*/
   .record-container {
     width: 100%;
@@ -71,10 +72,18 @@ export default {
     width: 40vw;
     @include jt-flex(column, nowrap, center, center);
     p {
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       margin: 0;
       width: 40vw;
     }
+  }
+  /*列表项左侧上*/
+  .record-date {
+    color: $text-color-1;
+  }
+  /*列表项左侧下*/
+  .record-type {
+    color: $text-color-2;
   }
   /*列表项右侧*/
   .record-item-right {
@@ -82,6 +91,7 @@ export default {
     font-size: 1rem;
     margin: 0;
     text-align: right;
+    color: $text-color-2;
   }
 
 </style>

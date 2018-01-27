@@ -75,8 +75,12 @@ export default {
     justify-content: $main;
     align-items: $cross;
   }
-  $text-color: gray;
-  $line-color: gray;
+  /*文字颜色*/
+  $text-color: rgb(152, 152, 152);
+  /*分割线颜色*/
+  $line-color: rgb(152, 152, 152);
+  /*按钮颜色*/
+  $button-color: rgb(213, 162, 107);
   /*提现容器*/
   .withdraw-container {
     width: 100%;
@@ -116,7 +120,7 @@ export default {
   }
   /*列表项*/
   .mu-list-item {
-    padding: 7px;
+    padding: 2vh;
     margin: 5px 10px;
     border: 0 solid $line-color;
     border-top-width: 1px;
@@ -133,6 +137,7 @@ export default {
   }
   /*列表项右侧*/
   .record-item-right {
+    width: 55vw;
     text-align: right;
   }
   /*更改账户按钮*/
@@ -140,14 +145,14 @@ export default {
     border: 0 solid white;
     background-color: transparent;
     outline: none;
-    color: chocolate;
+    color: $button-color;
     font-size: 0.75rem;
   }
   }
   /*申请提现按钮*/
   .withdraw-apply-btn {
     width: 80vw;
-    background-color: chocolate;
+    background-color: $button-color;
     color: white;
   }
 </style>

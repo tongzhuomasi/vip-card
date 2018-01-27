@@ -5,7 +5,7 @@
     <!--下部容器-->
     <div class="bottom-container">
       <div class="bottom-top-container">
-        <p class="bottom-top-top">买入金额</p>
+        <p class="bottom-top-top">充值金额</p>
         <div class="bottom-top-middle-container">
           <img class="bottom-top-middle-left" src="../../../../static/rmb.png" alt="钱币图标">
           <input class="bottom-top-middle-right" type="text">
@@ -24,7 +24,7 @@
         <img class="bottom-middle-left" src="../../../../static/weixin.png" alt="微信">
         <img class="bottom-middle-right" src="../../../../static/zhifubao.png" alt="支付宝">
       </div>
-      <mt-button class="bottom-bottom">确认买入</mt-button>
+      <mt-button class="bottom-bottom">确认充值</mt-button>
     </div>
   </div>
 </template>
